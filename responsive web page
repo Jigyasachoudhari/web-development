@@ -1,0 +1,67 @@
+<html>
+    <head>
+      <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Navigation Menu</title>
+        <style>
+           ul {
+               top: 0;
+               width: 100%;
+               position: fixed;
+               background-color:#333;
+               list-style-type:none;
+               padding:0;
+               margin:0;
+               overflow:hidden;
+           }
+           li{
+               float:left;
+           }
+           li a{
+               display:inline-block;
+               color:white;
+               padding:14px 15px;
+               text-align:center;
+              
+               text-decoration:none;
+           }
+           li a:hover{
+               background-color:#777;
+               color: yellow;
+           }
+           .active{
+               background-color:red;
+           }
+           #section{
+             padding: 10px 0px;
+             margin: 40px;
+           }
+        </style>
+    </head>
+    <body>
+        <ul >
+            <li><a href="#home" class="active">home</a></li>
+            <li><a href="#news">news</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+        <div id="section">
+        <h1>Welcome to our website</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var ul = document.getElementById("ul");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        ul.style.backgroundColor = "#555";
+      } else {
+        ul.style.backgroundColor = "#333";
+      }
+  });
+</script>
+    </body>
+</html>
